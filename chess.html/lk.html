@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <input type ="text" class="city" id="city">
+      <button onclick="temp()">Search</button>
+      <p id="res"></p>
+      <script>
+        function temp()
+        {
+           var name1=document.getElementById("id").value;
+           var key=`851e8c79811e2cfc68bfabfafae5d895`;
+           var url=`https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&q=${coimbatore}&appid=${17345fa632a8125fafa695f1e5ca0bcf}`;
+
+
+           fetch(url)
+           .then(data)=>data.json)
+           .then(data=>{
+            document.getElementById("cityname").innerHTML=data.name;
+            document.getElementById("temp").innerHTML=data.main.temp;
+           })
+        }
+      </script>
+    
+</body>
+</html>
